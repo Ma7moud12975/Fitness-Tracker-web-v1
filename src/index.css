@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Added Inter font */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme variables (kept as is) */
+    --background: 240 10% 98%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 24 100% 50%; /* Orange */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 15 80% 45%; /* Red-Orange */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 28 90% 55%; /* Golden-Orange */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 24 100% 50%; /* Match primary */
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 24 100% 50%; /* Orange */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 24 100% 50%; /* Match primary */
+    --success: 142 69% 58%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    /* Fitness-themed dark theme variables */
+    /* Base */
+    --background: 0 0% 0%; /* Pure Black */
+    --foreground: 240 5% 85%; /* Lighter gray text #d4d4d6 */
+    
+    /* Cards - Semi-transparent dark */
+    --card: 240 4% 10% / 0.7; /* hsla(240, 4%, 10%, 0.7) */
+    --card-foreground: 240 5% 85%;
+    
+    /* Popover - Slightly more opaque */
+    --popover: 240 4% 8% / 0.9;
+    --popover-foreground: 240 5% 85%;
+    
+    /* Primary - Energetic Orange */
+    --primary: 24 100% 50%; /* #ff8000 */
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Deep Red-Orange */
+    --secondary: 15 80% 45%; /* #cb4a24 */
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted */
+    --muted: 240 3.7% 11%; 
+    --muted-foreground: 240 5% 55%; /* Darker muted text */
+    
+    /* Accent - Golden Orange */
+    --accent: 28 90% 55%; /* #f29e37 */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive - Standard red */
+    --destructive: 0 72% 51%; /* #e5484d */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border - Subtle dark border */
+    --border: 240 3.7% 15.9% / 0.5; /* hsla(240, 3.7%, 15.9%, 0.5) */
+    --input: 240 3.7% 15.9%;
+    --ring: 24 100% 50%; /* Match primary */
+
+    /* Sidebar variables */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 24 100% 50%; /* Orange to match primary */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 24 100% 50%; /* Match primary */
+    
+    --success: 142 69% 58%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif; /* Apply Inter font globally */
+  }
+}
+
+/* FadeIn animation for messages */
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Pulse-glow animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px 1px rgba(255, 128, 0, 0.2), 0 0 8px 2px rgba(255, 128, 0, 0.15); } /* Orange glow */
+  50% { box-shadow: 0 0 10px 3px rgba(255, 128, 0, 0.3), 0 0 16px 4px rgba(255, 128, 0, 0.25); } /* Intensified orange glow */
+}
+
+.hover\:animate-pulse-glow:hover {
+  animation: pulse-glow 1.5s infinite ease-in-out;
+}
+
+/* Static background image class for the main app */
+.main-background-image {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), /* Dark overlay */
+    url('https://c1.wallpaperflare.com/preview/104/104/998/man-male-boy-a-person.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed during scroll */
+}
+
+/* Custom animations for login/signup */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideUpFadeIn {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+.animate-logoFloat {
+  animation: logoFloat 3s ease-in-out infinite;
+}
