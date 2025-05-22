@@ -58,7 +58,7 @@ const ExerciseDemoModal: React.FC<ExerciseDemoModalProps> = ({
   
   // Exercise GIF sources provided by the user
   const exerciseImages: Record<ExerciseType, string> = {
-    [ExerciseType.SQUAT]: "https://i.pinimg.com/originals/f9/db/a3/f9dba36451cab8b0b5be6d5ec9fd438a.gif",
+    [ExerciseType.SQUAT]: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2019/05/PERFECT-SERIES_LUNGE-HORIZONTAL_GRAIN.gif",
     [ExerciseType.BICEP_CURL]: "https://i.pinimg.com/originals/68/4d/50/684d50925eabbdf60f66d4bf7013c9ef.gif",
     [ExerciseType.PUSH_UP]: "https://i.pinimg.com/originals/fd/bb/09/fdbb092b58863e5c86fdb8bb1411fcea.gif",
     [ExerciseType.PULL_UP]: "https://tunturi.org/Blogs/2022/09-pull-up.gif",
