@@ -9,12 +9,15 @@
 
 ## 🚀 Features
 
-- 🎯 *Real-Time Pose Detection* – powered by TensorFlow.js and MoveNet/PoseNet.
-- 🧠 *Exercise Recognition* – smart logic to detect current movements.
-- 🔁 *Repetition Counting* – via angle thresholds and state machine logic.
-- 🛡 *Form Feedback* – real-time correction cues for safer workouts.
-- 🧾 *Exercise Library* – supports multiple common exercises.
-- 💬 *Assistant Chatbot* – built-in chatbot to guide users, answer questions, and suggest form improvements or workout tips during your session.
+- 🎯 **Real-Time Pose Detection** – Powered by TensorFlow.js and MoveNet/PoseNet  
+- 🧠 **Exercise Recognition** – Smart logic to detect current movements  
+- 🔁 **Repetition Counting** – Via angle thresholds and state machine logic  
+- 🛡️ **Form Feedback** – Real-time correction cues for safer workouts  
+- 🧾 **Exercise Library** – Supports multiple common exercises  
+- 💬 **Assistant Chatbot** – Built-in chatbot to guide users, answer questions, and suggest form improvements  
+- 🥗 **Food Detector** – Use your webcam to identify meals and get nutritional insights *(New Feature)*  
+- 📦 **Bar Code Scanner** – Instantly detect product barcodes to fetch calorie & nutrition data *(New Feature)*  
+
 
 ---
 
