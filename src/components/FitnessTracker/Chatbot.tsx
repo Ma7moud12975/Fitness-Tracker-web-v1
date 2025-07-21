@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { X, MessageCircle, Send, Mic, MicOff } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 
-const GEMINI_API_KEY = "AIzaSyDLVpZU80CE4XURZNcUBCbblO0d4uh0JQ4"; // IMPORTANT: Consider moving this key to environment variables for security
+const GEMINI_API_KEY = "AIzaSyA6hHiAJ8-360lKU6hQTkwLVNAC1nJswns"; // IMPORTANT: Consider moving this key to environment variables for security
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=${GEMINI_API_KEY}`; // Changed model to gemini-2.5-flash-preview-04-17-latest
 
 const initialPrompt = `You are a Physiotherapist and a professional virtual fitness trainer assistant... 
